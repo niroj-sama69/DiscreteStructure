@@ -30,13 +30,28 @@ int subtraction(int a,int b)
 }
 int main()
 {
-    int n1,n2,binAdd,binSub;
-    printf("Input first integer value");
+    int n1,n2,binAdd,binSub,binProd=0,binQuo=0,temp;
+    printf("Input first integer value\n");
     scanf("%d",&n1);
-    printf("Enter second integer value:");
+    printf("Enter second integer value:\n");
     scanf("%d",&n2);
     binAdd = addition(n1,n2);
     binSub = subtraction(n1,n2);
-    printf("Binary addition: %d",binAdd);
-    printf("binary subtrction: %d",binSub);
+    temp = n1;
+    while(temp>0)
+    {
+        binProd = addition(binProd,n2);
+        temp--;
+    }
+    temp = n1;
+    while(temp>0)
+    {
+        temp = subtraction(temp,n2);
+        binQuo++;
+    }
+    printf("Binary addition: %d\n",binAdd);
+    printf("binary subtrction: %d\n",binSub);
+    printf("binary product: %d\n",binProd);
+    printf("binary division: %d\n",binQuo);
+
 }
