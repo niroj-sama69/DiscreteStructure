@@ -18,7 +18,7 @@ int main()
     for(i=0;i<p;i++)
     {
         for(j=0;j<q;j++)
-            scanf("%d",&first[i][j]);
+            scanf("%d",&second[i][j]);
     }
     for(i=0;i<m;i++)
     {
